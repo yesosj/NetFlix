@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="./dex.css">
+
+<body>
+
+<form id="regForm" action="/action_page.php">
+<h1>Register:</h1>
+<!-- One "tab" for each step in the form: -->
+<div class="tab">닉네임:
+<p><input placeholder="Nick name..." oninput="this.className = ''" name="fname"></p>
+성별:
+<div id="sex">
+<button type="button" style="background-color: gray;">남자</button>
+<button type="button" id="sex" style="background-color: gray;">여자</button>
+</div><br>
+나이:
+<p><input type="date" min="1950-01-01" max="2021-12-31"></p>
+</div>
+
+
+<div class="tab">원하는 상대방 수: <br>
+
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+
+</div>
+<div class="tab">원하는 상대방 성별:
+<p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
+<p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
+<p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+</div>
+<div class="tab">Login Info:
+<p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+<p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+</div>
+<div style="overflow:auto;">
+<div style="float:right;">
+<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+</div>
+</div>
+<!-- Circles which indicates the steps of the form: -->
+<div style="text-align:center;margin-top:40px;">
+<span class="step"></span>
+<span class="step"></span>
+<span class="step"></span>
+<span class="step"></span>
+</div>
+</form>
+<script src="./dex.js"></script>
+</body>
+</html>
